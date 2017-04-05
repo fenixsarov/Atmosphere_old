@@ -22,6 +22,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('MainApp.urls')),
-    url(r'^admin/', include('AdminApp.urls')),
-    url(r'^user/', include('MastersApp.urls'))
+    # url(r'^admin/', include('AdminApp.urls')),
+    url(r'^master_page/', include('MastersApp.urls'))
 ]

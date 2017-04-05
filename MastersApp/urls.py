@@ -1,5 +1,6 @@
 from django.conf.urls import url
+from .views import Master_Page
 
 urlpatterns = [
-    # url(r'^$', main, name='index'),
+    url(r'^$', Master_Page, name='master_page'),
 ]
