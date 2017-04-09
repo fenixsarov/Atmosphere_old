@@ -1,0 +1,102 @@
+//@import "reset.less";
+@import "variable.less";
+@import "media.less";
+@import "mixin.less";
+@import "header.less";
+
+body {
+    
+}
+
+.main {
+    padding: 0;
+}
+#portfolio-carousel { 
+    position: relative;
+    .carousel-inner {
+        height: 100%;
+    }
+    .item {
+        height: 100%;
+        width: auto;
+        img {
+            width: 100%;
+        }
+        .caption {
+            position: absolute;
+            z-index: 100;
+            width: 300px;
+            bottom: 2em;
+            left: 4em;
+            border: none;
+            background-color: rgba(55, 107, 170, 0.7);
+            
+            .description {
+                .font-headers;
+                font-size: 1.4em;
+                color: #FFFFFF;
+                padding: 10px;
+                .content {
+                    span {
+                        text-align: center;
+                        display: block;
+                    }
+                }
+            }
+            .photo {
+                max-height: 120px;
+                padding: 0;
+                height: 100%;
+                overflow: hidden;
+                img {
+                    position: relative;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+    .carousel-control {
+        width: 2em;
+        i {
+            font-size: 1.5em;
+            position: absolute;
+            top: 50%;
+            margin-top: -1.5em/2;
+        }
+    }
+}
+/*
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+h1 {
+    font-size: @h1-size;
+}
+
+main {
+
+}
+
+#content {
+    padding-bottom: 100px;
+    height: auto;
+}
+
+footer {
+    margin: 0 auto;
+    margin-top: -40px;
+    height: 20px;
+}
+
+*/

@@ -4,43 +4,111 @@
 <html lang="en-ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>
         {% block title %}
             Фотостудия &quot;Атмосфера&quot;
         {% endblock %}
     </title>
 {#    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">#}
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 {#    <link rel="stylesheet" href="{% static 'css/main.css' %}">#}
 
     {% block js %}
-        <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+        <script src="{% static 'js/jquery-3.2.0.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
     {% endblock %}
     {% compress css %}
     {% if debug %}
-        <link rel="stylesheet" type="text/less" media="all" href="{% static 'css/main.less' %}" charset="utf-8" />
+        <link rel="stylesheet" type="text/less" media="all" href="{% static 'less/main.less' %}" charset="utf-8" />
         <script src="{% static 'js/less.min.js' %}"></script>
     {% else %}
-        <link rel="stylesheet" type="text/less" media="all" href="{% static 'css/main.less' %}"  charset="utf-8"/>
+        <link rel="stylesheet" type="text/less" media="all" href="{% static 'css/main.css' %}"  charset="utf-8"/>
     {% endif %}
     {% endcompress %}
 </head>
 <body>
-<main>
-    <header>
-        <h1 class="head">Фотостудия &quot;Атмосфера&quot; </h1>
+<section class="container-fluid">
+    <header class="row">
+        <div class="col-sm-2"><a href="#">О нас</a></div>
+        <div class="col-sm-2"><a href="#">Фотографы</a></div>
+        <div class="col-sm-4">
+            <div class="row">
+                <a class="logo col-sm-6 col-sm-push-3" href="/">
+                    <img src="{% static 'images/HeaderLogo.png' %}" alt="Фотостудия Атмосфера">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-2"><a href="#">Галерея</a></div>
+        <div class="col-sm-2"><a href="#">Контакты</a></div>
     </header>
-    <section id="content" class="clearfix">
-        {% block content %}
-        {% endblock %}
-    </section>
-    <div class="clear"></div>
-</main>
+</section>
+<section class="container-fluid main">
+    <div id="portfolio-carousel" class="carousel slide portfolio" data-interval="3000" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="active item">
+                <img src="{% static 'images/photoportfolio/1.jpg' %}" alt="">
+                <div class="row caption">
+                    <div class="col-sm-6 photo">
+                        <img src="{% static 'images/photograph/1.png' %}" alt="">
+                    </div>
+                    <div class="col-sm-6 description">
+                        <div class="content">
+                            <span class="name">Федор</span>
+                            <span class="surname">Игнатов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{% static 'images/photoportfolio/2.jpg' %}" alt="">
+                <div class="row caption">
+                    <div class="col-sm-6 photo">
+                        <img src="{% static 'images/photograph/2.png' %}" alt="">
+                    </div>
+                    <div class="col-sm-6 description">
+                        <div class="content">
+                            <span class="name">Акапян</span>
+                            <span class="surname">Ефрейтов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{% static 'images/photoportfolio/3.jpg' %}" alt="">
+                <div class="row caption">
+                    <div class="col-sm-6 photo">
+                        <img src="{% static 'images/photograph/3.png' %}" alt="">
+                    </div>
+                    <div class="col-sm-6 description">
+                        <div class="content">
+                            <span class="name">Судорог</span>
+                            <span class="surname">Пенов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control left" href="#portfolio-carousel" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="carousel-control right" href="#portfolio-carousel" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </div>
+</section>
+<section id="content" class="clearfix">
+    {% block content %}
+    {% endblock %}
+</section>
+<div class="clear"></div>
 
-<footer class="clearfix">
+<footer class="container">
     <p id="copy">
         &copy;2017 Все права защищены. Тишкин Дмитрий,Кравец Дмитрий
     </p>
