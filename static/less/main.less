@@ -9,6 +9,7 @@ body {
     overflow-x: hidden;
     a:hover {
         text-decoration: none;
+
     } 
 }
 section {
@@ -38,7 +39,8 @@ section {
     }
 }
 
-#portfolio-carousel { 
+#portfolio-carousel {
+    margin-top: -57px;
     position: relative;
     .carousel-inner {
         height: 100%;
@@ -63,7 +65,8 @@ section {
                 bottom: 0;
                 width: 100%;
                 border: none;
-                .backgrounded;
+                .backgrounded(0.4);
+                backdrop-filter: blur(5px);
                 .font-headers;
                 font-size: 1.4em;
                 color: #FFFFFF;
@@ -108,7 +111,7 @@ section {
 .content.photo-zone {
     .img-preview {
         div {
-            padding-bottom: 1em;
+            padding-bottom: 30px;
         }
         img {
             width: 100%;
