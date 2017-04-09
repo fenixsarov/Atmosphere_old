@@ -6,48 +6,54 @@
 {% block content %}
 <section>
     <div class="container-fluid">
-        <div id="portfolio-carousel" class="carousel slide portfolio" data-interval="300000" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="active item">
-                    <img src="{% static 'images/photoportfolio/1.jpg' %}" alt="">
-                    <div class="row caption">
-                        <img class="photo" src="{% static 'images/photograph/1.png' %}" alt="">
-                        <div class="col-sm-6 description">
-                            <span>Федор Игнатов</span>
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="portfolio-carousel" class="carousel slide portfolio" data-interval="300000" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="active item">
+                            <img src="{% static 'images/photoportfolio/1.jpg' %}" alt="">
+                            <div class="row caption">
+                                <img class="photo" src="{% static 'images/photograph/1.png' %}" alt="">
+                                <div class="col-sm-6 description">
+                                    <span>Федор Игнатов</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/photoportfolio/2.jpg' %}" alt="">
+                            <div class="row caption">
+                                <img class="photo" src="{% static 'images/photograph/2.png' %}" alt="">
+                                <div class="col-sm-6 description">
+                                    <span>Акапян Ефрейтов</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/photoportfolio/3.jpg' %}" alt="">
+                            <div class="row caption">
+                                <img class="photo" src="{% static 'images/photograph/3.png' %}" alt="">
+                                <div class="col-sm-6 description">
+                                    <span>Судорог Пенов</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <img src="{% static 'images/photoportfolio/2.jpg' %}" alt="">
-                    <div class="row caption">
-                        <img class="photo" src="{% static 'images/photograph/2.png' %}" alt="">
-                        <div class="col-sm-6 description">
-                            <span>Акапян Ефрейтов</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="{% static 'images/photoportfolio/3.jpg' %}" alt="">
-                    <div class="row caption">
-                        <img class="photo" src="{% static 'images/photograph/3.png' %}" alt="">
-                        <div class="col-sm-6 description">
-                            <span>Судорог Пенов</span>
-                        </div>
-                    </div>
+                    <a class="carousel-control left" href="#portfolio-carousel" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="carousel-control right" href="#portfolio-carousel" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 </div>
             </div>
-            <a class="carousel-control left" href="#portfolio-carousel" data-slide="prev">
-                <i class="fa fa-angle-left"></i>
-            </a>
-            <a class="carousel-control right" href="#portfolio-carousel" data-slide="next">
-                <i class="fa fa-angle-right"></i>
-            </a>
         </div>
     </div>
 </section>
 <section>
     <div class="container">
-        <img class="row splitter" src="{% static 'images/splitter.png' %}" alt="">
+        <div class="row">
+            <img class="col-sm-12 splitter" src="{% static 'images/splitter.png' %}" alt="">
+        </div>
         <h1 class="row header">Наши фотографы</h1>
     </div>
     <div class="container">
@@ -79,7 +85,9 @@
 </section>
 <section>
     <div class="container">
-        <img class="row splitter" src="{% static 'images/splitter.png' %}" alt="">
+        <div class="row">
+            <img class="col-sm-12 splitter" src="{% static 'images/splitter.png' %}" alt="">
+        </div>
         <h1 class="row header">Зоны для фотосессий</h1>
     </div>
     <div class="container">
@@ -104,12 +112,14 @@
 </section>
 <section>
     <div class="container">
-        <img class="row splitter" src="{% static 'images/splitter.png' %}" alt="">
+        <div class="row">
+            <img class="col-sm-12 splitter" src="{% static 'images/splitter.png' %}" alt="">
+        </div>
         <h1 class="row header">Как нас найти</h1>
     </div>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row contacts">
-            <img src="{% static 'images/map.jpg' %}" alt="" class="map">
+            <img class="col-sm-12" src="{% static 'images/map.jpg' %}" alt="" class="map">
 
         </div>
     </div>
