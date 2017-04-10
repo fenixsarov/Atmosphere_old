@@ -11,6 +11,13 @@ body {
     }
 }
 
+.logo {
+    padding: 8px;
+    img {
+        width: 100%;
+    }
+}
+
 .splitter {
     width: 100%;
     padding-top: 2em;
@@ -30,60 +37,83 @@ body {
     }
 }
 
-.container, .container-fluid {
-    .partition-name {
-        .font-headers;
-        font-size: 2.5em;
-        padding-top: 0;
-        padding-bottom: 0.3em;
-    }
-    .content {
-        .backgrounded;
-        .bordered;
-        padding: 1em 0 1em 0;
-    }
-}
-
-.content.photographs {
-    .profile {
-        width: 100%;
-    }
-    label {
-        display: block;
-        text-align: center;
-        padding: 8px;
-        font-size: 1.3em;
-        color: rgb(137, 174, 219);
-    }
-    & a:hover {
-        label {
-            color: rgb(250,250,250);
-        }
-    }
-}
-.content.photo-zone {
-    .img-preview {
-        div {
-            padding-bottom: 30px;
-        }
-        img {
-            width: 100%;
-            .img-bordered;
-        }
-    }
+.content {
     .description {
+        text-align: justify;
+        margin-top: 1em;
         .font-text;
         color: rgb(137, 174, 219);
     }
 }
-.contacts {
-    background-color: transparent !important;
-    border: none !important;
-    img.map {
+
+.at-img-link {
+    position: relative;
+    .at-img {
         width: 100%;
+        border: 1px solid transparent;
+        transition: border 0.4s ease;
+    }
+    .at-description {
+        display: block;
+        position: absolute;
+        margin: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-right: 16px;
+        margin-left: 16px;
+        background-color: rgba(6, 106, 180, 0.8);
+        //.backgrounded(0.9);
+        text-align: center;
+        height: 2em;
+        font-size: 1em;
+        color: rgb(209, 209, 209);
+        transition: 0.2s ease-in;
+    }
+
+    &:hover {
+        .at-img {
+            /*border: 1px solid #66b4d5;*/
+        }
+        .at-description {
+            font-size: 1.4em;
+            color: rgb(255,255,255);
+        }
     }
 }
 
+.content.photo-zone {
+    .at-img-link {
+        margin-bottom: 30px;
+    }
+}
+.at-contacts {
+    position: relative;
+    img.at-map {
+        position: relative;
+        width: 100%;
+        .bordered;
+    }
+}
+
+.at-contacts-container {
+    margin-top: -20em;
+    .at-contact-address {
+        background-color: #FFF;
+        border: 1px solid gray;
+        z-index: 1000;
+        p {
+            .font-text;
+        }
+    }
+    .at-contact-registration {
+        .backgrounded(0.6);
+        border: 1px solid gray;
+        border-left: none;
+        z-index: 1001;
+        
+    }
+}
 
 #portfolio-carousel {
     margin-top: -57px;
@@ -99,17 +129,19 @@ body {
         }
         .caption {
             position: absolute;
+            opacity: 0;
             z-index: 100;
             width: 200px;
             height: 150px;
             bottom: 2em;
-            left: 4em;
+            left: 50%;
             border: none;
             overflow: hidden;
             .description {
                 position: absolute;
                 bottom: 0;
                 width: 100%;
+                opacity: 0;
                 border: none;
                 .backgrounded(0.4);
                 .font-headers;
@@ -136,12 +168,3 @@ body {
         }
     }
 }
-/*
-section {
-    margin: 0;
-    padding: 0;
-}
-.main {
-    padding: 0;
-}
-*/

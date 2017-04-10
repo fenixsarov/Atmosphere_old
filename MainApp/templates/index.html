@@ -6,7 +6,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div id="portfolio-carousel" class="carousel slide portfolio" data-interval="3000" data-ride="carousel">
+        <div id="portfolio-carousel" class="carousel slide portfolio" data-interval="5000" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="active item">
                     <img src="{% static 'images/photoportfolio/1.jpg' %}" alt="">
@@ -53,26 +53,35 @@
 </div>
 <div class="container">
     <div class="row content photographs">
-        <a class="col-sm-2 col-sm-offset-1" href="#">
-            <img src="{% static 'images/photograph/1.png' %}" alt="" class="profile">
-            <label for="">Steven Rogers</label>
-        </a>
-        <a class="col-sm-2" href="#">
-            <img src="{% static 'images/photograph/2.png' %}" alt="" class="profile">
-            <label for="">Judith White</label>
-        </a>
-        <a class="col-sm-2" href="#">
-            <img src="{% static 'images/photograph/3.png' %}" alt="" class="profile">
-            <label for="">Joan Santos</label>
-        </a>
-        <a class="col-sm-2" href="#">
-            <img src="{% static 'images/photograph/4.png' %}" alt="" class="profile">
-            <label for="">Keith Murray</label>
-        </a>
-        <a class="col-sm-2" href="#">
-            <img src="{% static 'images/photograph/5.png' %}" alt="" class="profile">
-            <label for="">Shirley Jacobs</label>
-        </a>
+        <div class="col-sm-12">
+            <div class="row">
+                <a class="at-img-link col-sm-2 col-sm-offset-1" href="#">
+                    <img src="{% static 'images/photograph/1.png' %}" alt="" class="at-img">
+                    <label class="at-description" for="">Steven Rogers</label>
+                </a>
+                <a class="at-img-link col-sm-2" href="#">
+                    <img src="{% static 'images/photograph/2.png' %}" alt="" class="at-img">
+                    <label class="at-description" for="">Judith White</label>
+                </a>
+                <a class="at-img-link col-sm-2" href="#">
+                    <img src="{% static 'images/photograph/3.png' %}" alt="" class="at-img">
+                    <label class="at-description" for="">Joan Santos</label>
+                </a>
+                <a class="at-img-link col-sm-2" href="#">
+                    <img src="{% static 'images/photograph/4.png' %}" alt="" class="at-img">
+                    <label class="at-description" for="">Keith Murray</label>
+                </a>
+                <a class="at-img-link col-sm-2" href="#">
+                    <img src="{% static 'images/photograph/5.png' %}" alt="" class="at-img">
+                    <label class="at-description" for="">Shirley Jacobs</label>
+                </a>
+            </div>
+            <div class="row description">
+                <p class="col-xs-10 col-xs-offset-1">
+                    I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to. Unappalled by the massacre made upon them during the night, the sharks now freshly and more keenly allured by the before pent blood which began to flow from the carcass—the rabid creatures swarmed round it like bees in a beehive.
+                </p>
+            </div>
+        </div>
     </div>
 </div>
 <div class="container">
@@ -85,15 +94,33 @@
     <div class="row content photo-zone">
         <div class="col-xs-12">
             <div class="row img-preview">
-                <div class="col-xs-6 col-sm-4"><img src="{%static 'images/zones/1.png'%}" alt=""></div>
-                <div class="col-xs-6 col-sm-4"><img src="{%static 'images/zones/2.png'%}" alt=""></div>
-                <div class="col-xs-6 col-sm-4"><img src="{%static 'images/zones/3.png'%}" alt=""></div>
-                <div class="col-xs-6 col-sm-4"><img src="{%static 'images/zones/4.png'%}" alt=""></div>
-                <div class="col-xs-6 col-sm-4"><img src="{%static 'images/zones/5.png'%}" alt=""></div>
-                <div class="col-xs-6 col-sm-4"><img src="{%static 'images/zones/6.png'%}" alt=""></div>
+                <a class="at-img-link col-sm-4 col-xs-6" href="#">
+                    <img src="{% static 'images/zones/1.png' %}" alt="" class="at-img">
+                    <label class="at-description" for="">Фото для детей</label>
+                </a>
+                <a class="at-img-link col-sm-4 col-xs-6" href="#">
+                    <img src="{% static 'images/zones/2.png' %}" alt="" class="at-img">
+                    <label class="at-description" for="">В ожидании чуда</label>
+                </a>
+                <a class="at-img-link col-sm-4 col-xs-6" href="#">
+                    <img src="{% static 'images/zones/3.png' %}" alt="" class="at-img">
+                    <label class="at-description" for="">Для влюбленных</label>
+                </a>
+                <a class="at-img-link col-sm-4 col-xs-6" href="#">
+                    <img src="{% static 'images/zones/4.png' %}" alt="" class="at-img">
+                    <label class="at-description" for="">Куб</label>
+                </a>
+                <a class="at-img-link col-sm-4 col-xs-6" href="#">
+                    <img src="{% static 'images/zones/5.png' %}" alt="" class="at-img">
+                    <label class="at-description" for="">Свадьба</label>
+                </a>
+                <a class="at-img-link col-sm-4 col-xs-6" href="#">
+                    <img src="{% static 'images/zones/6.png' %}" alt="" class="at-img">
+                    <label class="at-description" for="">Гостинная</label>
+                </a>
             </div>
             <div class="row description">
-                <p class="col-xs-12">
+                <p class="col-xs-10 col-xs-offset-1">
                     I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to. Unappalled by the massacre made upon them during the night, the sharks now freshly and more keenly allured by the before pent blood which began to flow from the carcass—the rabid creatures swarmed round it like bees in a beehive.
                 </p>
             </div>
@@ -106,9 +133,58 @@
     </div>
     <h1 class="row partition-name">Как нас найти</h1>
 </div>
-<div class="container-fluid">
-    <div class="row contacts">
-        <img src="{% static 'images/map.jpg' %}" alt="" class="col-sm-12 map">
+<div class="container-fluid at-contacts">
+    <div class="row">
+        <img src="{% static 'images/map.jpg' %}" alt="" class="at-map">
+    </div>
+    <div class="container">
+        <div class="row at-contacts-container">
+            <div class="col-sm-6 at-contact-address">
+                <div class="row">
+                    <a href="/" class="logo col-sm-6 col-sm-offset-3">
+                        <img src="{% static 'images/logo.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <p>
+                            г. Саров<br>
+                            МУП «Товарная база»<br>
+                            ул. Железнодорожная д. 10 стр. 5<br><br>
+
+                            8 (952) 123-45-67<br>
+                            8 (83130) 1-23-45<br><br>
+
+                            E-mail: alalalaal@ddgdg.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 at-contact-registration">
+                <div class="row">
+                    <h1 class="col-sm-12 partition-name">
+                    Запишитесь на фотосессию
+                    </h1>
+                </div>
+                <form action="" class="col-sm-8 col-sm-offset-2">
+                    <div class="row">
+                        <i class="col-sm-1 fa fa-user"></i>
+                        <input name="name" class="col-sm-11" placeholder="Ваше имя">
+                    </div>
+                    <div class="row">
+                        <i class="col-sm-1 fa fa-phone"></i>
+                        <input name="phone" class="col-sm-11" placeholder="Ваш телефон">
+                    </div>
+                    <div class="row">
+                        <i class="col-sm-1 fa fa-envelope"></i>
+                        <input name="email" class="col-sm-11" placeholder="E-mail">
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn btn-default col-sm-3 col-sm-offset-9">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
