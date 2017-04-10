@@ -1,3 +1,3 @@
 $(function () {
-    $('.carousel.portfolio').height($(window).height() - $('header').height());
+    $('#portfolio-carousel .carousel-inner').height($(window).height());
 });

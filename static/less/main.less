@@ -6,27 +6,18 @@
 @import "footer.less";
 
 body {
-    overflow-x: hidden;
     a:hover {
         text-decoration: none;
-
-    } 
-}
-section {
-    .container-fluid {
-        margin: 0;
-        padding: 0;
     }
 }
-.main {
-    padding: 0;
-}
+
 .splitter {
     width: 100%;
     padding-top: 2em;
 }
+
 .container, .container-fluid {
-    .header {
+    .partition-name {
         .font-headers;
         font-size: 2.5em;
         padding-top: 0;
@@ -39,61 +30,23 @@ section {
     }
 }
 
-#portfolio-carousel {
-    margin-top: -57px;
-    position: relative;
-    .carousel-inner {
-        height: 100%;
+.container, .container-fluid {
+    .partition-name {
+        .font-headers;
+        font-size: 2.5em;
+        padding-top: 0;
+        padding-bottom: 0.3em;
     }
-    .item {
-        height: 100%;
-        width: auto;
-        img {
-            width: 100%;
-        }
-        .caption {
-            position: absolute;
-            z-index: 100;
-            width: 200px;
-            height: 150px;
-            bottom: 2em;
-            left: 4em;
-            border: none;
-            overflow: hidden;
-            .description {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                border: none;
-                .backgrounded(0.4);
-                backdrop-filter: blur(5px);
-                .font-headers;
-                font-size: 1.4em;
-                color: #FFFFFF;
-                span {
-                    text-align: center;
-                    display: block;
-                }
-            }
-            .photo {
-                padding: 0;
-                overflow: hidden;
-            }
-        }
-    }
-    .carousel-control {
-        width: 2em;
-        i {
-            font-size: 1.5em;
-            position: absolute;
-            top: 50%;
-            margin-top: -1.5em/2;
-        }
+    .content {
+        .backgrounded;
+        .bordered;
+        padding: 1em 0 1em 0;
     }
 }
+
 .content.photographs {
     .profile {
-        width: 100%;  
+        width: 100%;
     }
     label {
         display: block;
@@ -130,3 +83,65 @@ section {
         width: 100%;
     }
 }
+
+
+#portfolio-carousel {
+    margin-top: -57px;
+    position: relative;
+    .carousel-inner {
+        height: 100%;
+    }
+    .item {
+        height: 100%;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+        .caption {
+            position: absolute;
+            z-index: 100;
+            width: 200px;
+            height: 150px;
+            bottom: 2em;
+            left: 4em;
+            border: none;
+            overflow: hidden;
+            .description {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                border: none;
+                .backgrounded(0.4);
+                .font-headers;
+                font-size: 1.4em;
+                color: #FFFFFF;
+                span {
+                    text-align: center;
+                    display: block;
+                }
+            }
+            .photo {
+                padding: 0;
+                overflow: hidden;
+            }
+        }
+    }
+    .carousel-control {
+        width: 2em;
+        i {
+            font-size: 1.5em;
+            position: absolute;
+            top: 50%;
+            margin-top: -1.5em/2;
+        }
+    }
+}
+/*
+section {
+    margin: 0;
+    padding: 0;
+}
+.main {
+    padding: 0;
+}
+*/

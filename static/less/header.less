@@ -1,4 +1,4 @@
-header {
+.navigation {
     position: relative;
     z-index: 1000;
     padding: 0;
@@ -6,28 +6,31 @@ header {
     .backgrounded(0.8);
     font-size: 2em;
     text-align: center;
+    nav {
+        a {
+            padding-left: 0;
+            padding-right: 0;
+            .font-headers;
+            font-size: 0.6em;
+            display: block;
+            text-align: center;
+            padding: 1em;
+            color: #FFFFFF;
+            letter-spacing: 2.73px;
+            text-shadow: 1px 1px 1px rgb(150,150,150);
 
-    a {
-        .font-headers;
-        font-size: 0.6em;
-        display: block;
-        text-align: center;
-        padding: 1em;
-        color: #FFFFFF;
-        letter-spacing: 2.73px;
-        text-shadow: 1px 1px 1px rgb(150,150,150);
-
-        &:hover {
-            text-shadow: 1px 1px 1px rgb(205,205,205, 0.7);
+            &:hover {
+                text-shadow: 1px 1px 1px rgb(205,205,205, 0.7);
+            }
         }
-    }
 
-    .logo {
-        position: absolute;
-        top: 0.2em;
-        img {
-            width: 6em;
-            height: 6em;
+        .logo {
+            position: absolute;
+            top: 0.2em;
+            img {
+                width: 8em;
+                height: 8em;
+            }
         }
     }
 }
