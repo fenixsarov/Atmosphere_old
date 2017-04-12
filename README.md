@@ -10,8 +10,8 @@ Install virtualenv and virtualenvwrapper
 
 For Ubuntu:
 Add to ./bashrc or execute each time before starup OS
-    export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-    source /usr/local/bin/virtualenvwrapper.sh
+>export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+>source /usr/local/bin/virtualenvwrapper.sh
 
 Install Nodejs from https://www.npmjs.com/get-npm
 Install lessc
