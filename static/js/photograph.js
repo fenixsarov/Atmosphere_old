@@ -29,7 +29,7 @@ $(function () {
                 .appendTo(this)
                 .stop()
                 .animate({
-                    'opacity': 0.8
+                    'opacity': 0.6
                 }, 300);
         });
     $(document).on('mouseleave', 'div.photo',
@@ -80,7 +80,6 @@ $(function () {
 function removePhotoBacking(element) {
     $(element)
         .find('h2.photo-desc')
-        //.stop()
         .animate({
             'opacity': 0
         }, 300, function () {
@@ -88,7 +87,6 @@ function removePhotoBacking(element) {
         })
         .end()
         .find('div.at-backing')
-        //.stop()
         .animate({
             'opacity': 0
         }, 300, function () {

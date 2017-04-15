@@ -7,6 +7,16 @@ $(function () {
         top: 0
     }, 600);
 
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 150) {
+            $('nav.navbar.navbar-at')
+                .addClass('navbar-at-scroll');
+        } else {
+            $('nav.navbar.navbar-at')
+                .removeClass('navbar-at-scroll');
+        }
+    });
+
     $('.portfolio').height($(window).height() - 100);
 
     $('#portfolio-carousel')
