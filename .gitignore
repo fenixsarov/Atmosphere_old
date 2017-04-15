@@ -1,3 +1,5 @@
+.gitignore
 mysql.cnf
 
 main.*.css
+runserver.sh

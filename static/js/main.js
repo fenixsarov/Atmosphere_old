@@ -1,5 +1,13 @@
 $(function () {
-    $('#portfolio-carousel .carousel-inner').height($(window).height());
+    $('.navbar-at').css({
+        top: -$('.navbar-at').height(),
+        opacity: 0
+    }).animate({
+        opacity: 1,
+        top: 0
+    }, 600);
+
+    $('.portfolio').height($(window).height() - 100);
 
     $('#portfolio-carousel')
         .find('.caption')

@@ -5,6 +5,8 @@
 @import "header.less";
 @import "footer.less";
 
+@import "photograph.less";
+
 body {
     a:hover {
         text-decoration: none;
@@ -23,6 +25,32 @@ body {
     padding-top: 2em;
 }
 
+div.at-backing {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #055fab;
+}
+
+div.content.portfolio-img {
+    overflow: hidden;
+    padding: 0;
+    *[class*="col-"] {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .at-img-justify {
+        width: 100%;
+    }
+}
+
 .container, .container-fluid {
     .partition-name {
         .font-headers;
@@ -37,13 +65,11 @@ body {
     }
 }
 
-.content {
-    .description {
-        text-align: justify;
-        margin-top: 1em;
-        .font-text;
-        color: rgb(137, 174, 219);
-    }
+.description {
+    text-align: justify;
+    margin-top: 1em;
+    .font-text;
+    color: rgb(137, 174, 219);
 }
 
 .at-img-link {
@@ -116,7 +142,6 @@ body {
 }
 
 #portfolio-carousel {
-    margin-top: -57px;
     position: relative;
     .carousel-inner {
         height: 100%;
@@ -166,5 +191,66 @@ body {
             top: 50%;
             margin-top: -1.5em/2;
         }
+    }
+}
+
+
+/* PHOTOGRAPH LESS */
+.photograph-information {
+    overflow: hidden;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+     .row {
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    & [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .photograph-information {
+        background-image: -webkit-linear-gradient(#76B5FF 0%, #3B6FAD 100%);
+        background-image: -moz-linear-gradient(#76B5FF 0%, #3B6FAD 100%);
+        background-image: -o-linear-gradient(#76B5FF 0%, #3B6FAD 100%);
+        background-image: linear-gradient(#76B5FF 0%, #3B6FAD 100%);
+        padding: 30px;
+        .font-headers;
+        .desc {
+            opacity: 0;
+            padding-top: 50px;
+        }
+        .photograph-label {
+            font-size: 2em;
+            color: rgb(6, 106, 180);
+        }
+        .photograph-name {
+            opacity: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #fff;
+            font-size: 3em;
+            letter-spacing: 5.45px;
+            text-shadow: 2px 2px 2px rgba(255,255,255,0.50);
+        }
+        .description {
+            opacity: 0;
+            color: #fff;
+        }
+    }
+}
+
+.portfolio-img {
+    .photo {
+        min-height: 300px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: #ccc;
     }
 }

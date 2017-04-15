@@ -11,11 +11,15 @@
     background-color: rgba(6, 106, 180, @opacity);
 }
 
-.font-text {
+.font-text(@size: 1.3em) {
     font-family: "Comfortaa";
-    font-size: 1.3em;
+    font-size: @size;
 }
 
 .img-bordered {
     border: 1px solid rgb(184, 184, 184);
+}
+
+.img-stretch {
+    width: 100%;
 }
