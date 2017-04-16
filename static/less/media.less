@@ -6,16 +6,17 @@
 @screen-md-min: 992px;
 @screen-lg-min: 1200px;
 
-@media (min-width: @screen-sm-min) {
-    font-size: 12px;
-}
+@media (max-width: @screen-sm-min) {
+    body {
+        font-size: 12px;
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {
-    font-size: 14px;
+@media (min-width: @screen-sm-min) {
+    body {
+        font-size: 15px;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-lg-min) {
-    
+
 }

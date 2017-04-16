@@ -1,11 +1,25 @@
-nav.navbar.navbar-at {
+@media (max-width: @screen-sm-min) {
+    body {
+        
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    
+}
+nav.navbar {
     position: fixed;
     top: 0;
+    ul.nav.navbar-nav {
+        margin-top: 0;
+    }
+}
+
+nav.at-navbar{
     opacity: 0;
     width: 100%;
     border-radius: 0;
     z-index: 1000;
-    background-color: rgba(255,255,255,0);
     box-shadow: 0;
     transition: background-color 0.3s ease-in;
     .nav.navbar-nav {
@@ -17,7 +31,7 @@ nav.navbar.navbar-at {
         }
         li > a {
             .font-text(1.3em);
-            padding: 25px;
+            padding: 20px 0 20px 0;
             color: white;
             transition: 0.2s ease-in;
             &:hover {
@@ -36,8 +50,7 @@ nav.navbar.navbar-at {
         }
     }
 }
-
-nav.navbar.navbar-at-scroll {
+nav.at-navbar-scroll {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     background-color: rgba(255,255,255,1);
     .nav.navbar-nav {
@@ -50,6 +63,45 @@ nav.navbar.navbar-at-scroll {
         .nav.navbar-nav {
             li > a {
                 color: #008ae9;
+            }
+        }
+    }
+}
+
+nav.at-navbar-slide {
+    z-index: 1001;
+    bottom: 0;
+    margin-bottom: 0;
+    width: 200px;
+    left: -205px;
+    background-color: rgba(255,255,255,1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    .slide-btn {
+        position: absolute;
+        z-index: 1003;
+        top: 20px;
+        right: -60px;
+        border-radius: 50%;
+        background-color: rgba(255,255,255,0.9);
+        .font-text;
+        width: 3em;
+        height: 3em;
+        padding: 10px;
+        font-size: 12px;
+        border: none;
+        transition: background-color 0.3s ease-in;
+        &:hover {
+            background-color: rgba(255,255,255,0.98);
+        }
+    }
+    .navbar-nav {
+        li {
+            .font-text;
+            text-align: center;
+        }
+        .logo {
+            img {
+                width: 60px;
             }
         }
     }
