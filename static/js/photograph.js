@@ -2,6 +2,8 @@ $(function () {
     let $info = $('.photograph-information .desc');
     let $photo = $('div.photo');
 
+    setPhotographPhoto('1');
+
     $info.animate({
         'paddingTop': $('.photograph-information').height() / 2 - $info.height() / 2,
         'opacity': 1
@@ -24,7 +26,7 @@ $(function () {
                 .animate({
                     'opacity': 1,
                     'padding-bottom': 0
-                }, 500);
+                 }, 500);
             $('<div class="at-backing"></div>')
                 .appendTo(this)
                 .stop()
@@ -92,4 +94,9 @@ function removePhotoBacking(element) {
         }, 300, function () {
             $(this).remove();
         });
+}
+
+function setPhotographPhoto(name) {
+    $('.photograph-img').find('img')
+        .attr('src', '/static/images/photograph/' + name + '/person.png');
 }

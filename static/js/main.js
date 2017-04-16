@@ -1,19 +1,46 @@
 $(function () {
-    $('.navbar-at').css({
-        top: -$('.navbar-at').height(),
+    $('.at-navbar').css({
+        top: -$('.at-navbar').height(),
         opacity: 0
     }).animate({
         opacity: 1,
         top: 0
     }, 600);
+    
+    $('.slide-btn')
+        .on('click', function () {
+            if ($(this).hasClass('at-navbar-show')) {
+                $(this)
+                    .removeClass('at-navbar-show')
+                    .parent()
+                    .animate({
+                        'left': 0
+                    }, 300, function () {
+                        $('body').css({
+                            'overflow': 'hidden'
+                        });
+                    });
+            } else {
+                $(this)
+                    .addClass('at-navbar-show')
+                    .parent()
+                    .animate({
+                        'left': '-205px'
+                    }, 300, function () {
+                        $('body').css({
+                            'overflow': 'auto'
+                        });
+                    });
+            }
+        });
 
     $(window).scroll(function () {
         if ($(window).scrollTop() > 150) {
-            $('nav.navbar.navbar-at')
-                .addClass('navbar-at-scroll');
+            $('nav.navbar.at-navbar')
+                .addClass('at-navbar-scroll');
         } else {
-            $('nav.navbar.navbar-at')
-                .removeClass('navbar-at-scroll');
+            $('nav.navbar.at-navbar')
+                .removeClass('at-navbar-scroll');
         }
     });
 
