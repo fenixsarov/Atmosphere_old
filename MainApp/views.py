@@ -6,13 +6,17 @@ def main(request):
     page = 'index'
     return render(request, 'index.html', {"page": page, "debug": debug})
 
-def about(req):
+def about(request):
     page = 'about'
-    return render(req, 'about.html', {"page": page, "debug": debug})
+    return render(request, 'about.html', {"page": page, "debug": debug})
 
-def photograph(req):
+def photograph(request):
     page = 'photograph'
-    return render(req, 'photograph.html', {"page": page, "debug": debug})
+    return render(request, 'photograph.html', {"page": page, "debug": debug})
 
+def photographs(request):
+    page = 'photographs'
+    # Временно отрисовывается персональная страница фотографа
+    return render(request, 'photograph.html', {"page": page, "debug": debug})
 
 # Create your views here.
