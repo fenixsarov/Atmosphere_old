@@ -48,7 +48,7 @@
                     <img src="{% static 'images/HeaderLogo.png' %}" alt="Фотостудия Атмосфера">
                 </a>
             </li>
-            <li class="col-xs-12"><a href="about">О нас</a></li>
+            <li class="col-xs-12"><a href="{% url 'about' %}">О нас</a></li>
             <li class="col-xs-12"><a href="{% url 'photographs' %}">Фотографы</a></li>
             <li class="col-xs-12"><a href="#">Галерея</a>
             <li class="col-xs-12"><a href="#">Контакты</a>
@@ -58,7 +58,7 @@
         <div class="container">
             <div class="row collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="col-sm-2"><a href="about">О нас</a></li>
+                    <li class="col-sm-2"><a href="{% url 'about' %}">О нас</a></li>
                     <li class="col-sm-2"><a href="{% url 'photograph' %}">Фотографы</a></li>
                     <li class="col-sm-4">
                         <div class="row">
