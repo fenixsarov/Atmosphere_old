@@ -19,4 +19,12 @@ def photographs(request):
     # Временно отрисовывается персональная страница фотографа
     return render(request, 'photograph.html', {"page": page, "debug": debug})
 
+def contacts(request):
+    page = 'contacts'
+    return render(request, 'contacts.html', {"page": page, "debug": debug})
+
+def galery(request):
+    page = 'galery'
+    return render(request, 'galery.html', {"page": page, "debug": debug})
+
 # Create your views here.

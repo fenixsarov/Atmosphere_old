@@ -4,5 +4,13 @@
     О фотостудии | {{ block.super }}
 {% endblock %}
 {% block content %}
-    
+    <div class="container">
+        <div class="row">
+            <img class="col-sm-12 splitter" src="{% static 'images/splitter.png' %}" alt="">
+        </div>
+        <h1 class="row partition-name">О нас</h1>
+    </div>
+    <p>На мой взгляд старницы контактов идейно дублирует страницу 'О нас'. Либо на странице контактов
+    можно ещё будет размещать контакты постоянных фотографов.
+    </p>
 {% endblock %}

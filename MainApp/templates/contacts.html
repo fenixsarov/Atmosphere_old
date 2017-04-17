@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}
+    Контакты | {{ block.super }}
+{% endblock %}
+{% block content %}
+    <div class="container">
+    <div class="row">
+        <img class="col-sm-12 splitter" src="{% static 'images/splitter.png' %}" alt="">
+    </div>
+    <h1 class="row partition-name">Как нас найти</h1>
+</div>
+<div class="container-fluid at-contacts">
+    <div class="row">
+        <img src="{% static 'images/map.jpg' %}" alt="" class="at-map">
+    </div>
+    <div class="container">
+        <div class="row at-contacts-container">
+            <div class="col-sm-6 at-contact-address">
+                <div class="row">
+                    <a href="/" class="logo col-sm-6 col-sm-offset-3">
+                        <img src="{% static 'images/logo.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <p>
+                            г. Саров<br>
+                            МУП «Товарная база»<br>
+                            ул. Железнодорожная д. 10 стр. 5<br><br>
+
+                            8 (952) 123-45-67<br>
+                            8 (83130) 1-23-45<br><br>
+
+                            E-mail: alalalaal@ddgdg.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

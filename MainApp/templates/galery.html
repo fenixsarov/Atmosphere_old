@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}
+    Галерея | {{ block.super }}
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <img class="col-sm-12 splitter" src="{% static 'images/splitter.png' %}" alt="">
+        </div>
+        <h1 class="row partition-name">Галерея</h1>
+    </div>
+    <p>Тут будет галерея, где можно будет посмотреть фотолокации, которые есть в студии,
+    рандомные фотки, сделанные в студии за всё время и тд. Можно разбить по тематикам.
+    </p>
+{% endblock %}
