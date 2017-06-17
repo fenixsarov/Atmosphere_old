@@ -1,7 +1,19 @@
 from django.db import models
 
+# Very important tables
+class Privilege(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(verbose_name='Имя', max_length=15, unique=True)
+
+
+class Category(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(verbose_name='Имя', max_length=15, unique=True)
+    description = models.TextField(verbose_name='Описание')
+    id_privileges = models.ForeignKey(Privilege, verbose_name='Привилегии')
 
 class Person(models.Model):
+    id = models.AutoField(primary_key=True)
     username = models.CharField(verbose_name='Логин', max_length=20, unique=True)
     name = models.CharField(verbose_name='Имя', max_length=20)
     surname = models.CharField(verbose_name='Фамилия', max_length=20)
@@ -10,17 +22,15 @@ class Person(models.Model):
     phone = models.CharField(verbose_name='м.телефон', max_length=11)
 
     password = models.CharField(verbose_name='Пароль', max_length=30)
-    id_category = models.PositiveSmallIntegerField()
+    id_category = models.ForeignKey(Category, verbose_name='Категория пользователя')
 
 
-class Category(models.Model):
-    name = models.CharField(verbose_name='Имя', max_length=15, unique=True)
-    description = models.TextField(verbose_name='Описание')
-    privileges = models.CharField(verbose_name='Привилегии', max_length=20)
+# Secondary tables
+class Photo(models.Model):
+    id = models.AutoField(primary_key=True)
 
 
-class Privilege(models.Model):
-    name = models.CharField(verbose_name='Имя', max_length=15, unique=True)
+
 
 
 # Create your models here.
