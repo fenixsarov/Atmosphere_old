@@ -1,6 +1,6 @@
 $(function () {
-    let $info = $('.photograph-information .desc');
-    let $photo = $('div.photo');
+    var $info = $('.photograph-information .desc');
+    var $photo = $('div.photo');
 
     setPhotographPhoto('1');
 
@@ -19,7 +19,7 @@ $(function () {
     $(document).on('mouseenter', 'div.photo',
         function () {
             removePhotoBacking(this);
-            let name = $(this).attr('rel');
+            var name = $(this).attr('rel');
             $('<h2 class="photo-desc">' + name + '</h2>')
                 .appendTo(this)
                 .stop()
@@ -40,7 +40,7 @@ $(function () {
         }
     );
 
-    let photo_path = [
+    var photo_path = [
         {"name": 'portrait', "path": '/static/images/photograph/1/galery/portrait/vtmAu3U__w8.jpg'},
         {"name": 'child', "path": '/static/images/photograph/1/galery/child/wQolGrhjWFs.jpg'},
         {"name": 'surprise', "path": '/static/images/photograph/1/galery/surprise/vKsQzRE6HLc.jpg'},
@@ -49,12 +49,12 @@ $(function () {
         {"name": 'nature', "path": '/static/images/photograph/1/galery/nature/f2am_XG_7PI.jpg'}
     ];
 
-    let $photo_album = $('div.galery');
+    var $photo_album = $('div.galery');
     
-    for (let i = 0; i < photo_path.length - 1 / 2; i+=3) {
-        let first_col = Math.floor(Math.random() * (7 - 4)) + 4;
-        let second_col = Math.floor(Math.random() * ((10-first_col) - 2)) + 2;
-        let third_col = 12 - first_col - second_col;
+    for (var i = 0; i < photo_path.length - 1 / 2; i+=3) {
+        var first_col = Math.floor(Math.random() * (7 - 4)) + 4;
+        var second_col = Math.floor(Math.random() * ((10-first_col) - 2)) + 2;
+        var third_col = 12 - first_col - second_col;
 
         $("<a></a>")
             .css({
@@ -77,6 +77,8 @@ $(function () {
             })
             .wrap('<div class="photo col-xs-6 col-sm-' + third_col + '" rel="' + photo_path[i+2].name + '">');
     }
+
+    fillCalendarDays();
 });
 
 function removePhotoBacking(element) {
@@ -99,4 +101,48 @@ function removePhotoBacking(element) {
 function setPhotographPhoto(name) {
     $('.photograph-img').find('img')
         .attr('src', '/static/images/photograph/' + name + '/person.png');
+}
+
+function fillCalendarDays(chooseMonth) {
+    // Месяц текущий, или следующий
+    var d = new Date();
+    var year = d.getFullYear();
+    var month = d.getUTCMonth();
+    var today = d.getDate();
+    var first_day = new Date(year,month,1);
+    var first_wday = first_day.getDay();
+    var oneHour = 1000 * 60 * 60; // вычисляем количество миллисекунд в 1 часе
+    var oneDay = oneHour * 24; // вычисляем количество миллисекунд в одних сутках
+    var nextMonth = new Date(year, month + 1, 1); // устанавливаем дату первого числа следующего месяца 
+    var last_date = Math.ceil((nextMonth.getTime() - first_day.getTime() - oneHour)/oneDay);// вычисляем крайний день текущего месяца
+
+    var $calendar = $('.at-calendar-table');
+
+    var $table_row = $('<tr class="at-calendar-week"></tr>');
+    var $table_col = $("<td></td>");
+    var month_day = 1;
+
+    for(var i = 1;; i++) {
+        if(month_day === last_date) {
+            $table_col.append('<button class="at-calendar-day-btn">' + month_day + '</button>');
+            $table_row.append($table_col.clone());
+            $calendar.append($table_row.clone());
+            $table_row.empty();
+            $table_col.empty();
+            break;
+        }
+
+        if (i >= first_wday) {
+            $table_col.append('<button class="at-calendar-day-btn">' + month_day + '</button>');
+            month_day++;
+        }
+        $table_row.append($table_col.clone());
+        $table_col.empty();
+
+        if (i % 7 === 0) {
+            $calendar.append($table_row.clone());
+            $table_row.empty();
+        }
+    }
+
 }
