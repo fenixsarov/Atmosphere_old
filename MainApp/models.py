@@ -112,6 +112,6 @@ class Portfolio(models.Model):
     id_photos = models.ForeignKey(Photo)
 
     def __str__(self):
-        return self.id
+        return "{}".format(self.id)
 
 # Create your models here.
