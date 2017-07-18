@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import RequestForm
 
 debug_flag = True
 
@@ -38,5 +39,16 @@ def galery(request):
     debug = debug_flag
     page = 'galery'
     return render(request, 'galery.html', locals())
+
+
+def request_form(request):
+    debug = debug_flag
+    page = 'request_form'
+    form = RequestForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        # print(request.POST)
+        # print(form.cleaned_data)
+        form = form.save()
+    return render(request, 'request_form.html', locals())
 
 # Create your views here.

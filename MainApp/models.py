@@ -26,7 +26,7 @@ class Person(models.Model):
     name = models.CharField(verbose_name='Имя', max_length=20)
     surname = models.CharField(verbose_name='Фамилия', max_length=20)
     age = models.PositiveIntegerField(verbose_name='Возраст', default=18)
-    email = models.CharField(verbose_name='e-mail', max_length=30)
+    email = models.EmailField()
     phone = models.CharField(verbose_name='м.телефон', max_length=11)
 
     password = models.CharField(verbose_name='Пароль', max_length=30)
@@ -76,7 +76,11 @@ class Request(models.Model):
     phone = models.CharField(verbose_name='Телефон', max_length=11)
 
     def __str__(self):
-        return self.id
+        return "Заказчик: {} {}".format(self.name, self.surname)
+
+    class Meta:
+        verbose_name = 'Request'
+        verbose_name_plural = 'Requests'
 
 
 class Location(models.Model):
@@ -86,7 +90,7 @@ class Location(models.Model):
     id_photo = models.ForeignKey(Photo)
 
     def __str__(self):
-        return self.id
+        return "{}".format(self.id)
 
 
 class Order(models.Model):

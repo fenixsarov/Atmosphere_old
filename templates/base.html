@@ -50,8 +50,9 @@
             </li>
             <li class="col-xs-12"><a href="{% url 'about' %}">О нас</a></li>
             <li class="col-xs-12"><a href="{% url 'photographs' %}">Фотографы</a></li>
-            <li class="col-xs-12"><a href="{% url 'galery' %}">Галерея</a>
-            <li class="col-xs-12"><a href="{% url 'contacts' %}">Контакты</a>
+            <li class="col-xs-12"><a href="{% url 'galery' %}">Галерея</a></li>
+{#            <li class="col-xs-12"><a href="{% url 'contacts' %}">Контакты</a></li>#}
+            <li class="col-xs-12"><a href="{% url 'request_form' %}">Оставить заявку</a></li>
         </ul>
     </nav>
     <nav class="navbar at-navbar hidden-xs">
@@ -68,7 +69,8 @@
                         </div>
                     </li>
                     <li class="col-sm-2"><a href="{% url 'galery' %}">Галерея</a>
-                    <li class="col-sm-2"><a href="{% url 'contacts' %}">Контакты</a>
+{#                    <li class="col-sm-2"><a href="{% url 'contacts' %}">Контакты</a>#}
+                    <li class="col-xs-2"><a href="{% url 'request_form' %}">Оставить заявку</a></li>
                 </ul>
             </div>
         </div>
