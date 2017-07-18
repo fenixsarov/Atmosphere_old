@@ -35,11 +35,11 @@ class Person(models.Model):
     def __str__(self):
         return self.name
 
+
 class Avatar(models.Model):
     id = models.AutoField(primary_key=True)
     avatar_img = models.ImageField()
     id_person = models.ForeignKey(Person)
-
 
 
 # Secondary tables
