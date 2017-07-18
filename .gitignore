@@ -1,5 +1,5 @@
 .gitignore
 mysql.cnf
-
+*.pyc
 main.*.css
 runserver.sh

@@ -107,3 +107,75 @@ div.content.galery {
         }
     }
 }
+
+
+// CALENDAR
+.at-calendar {
+    margin-top: -16px;
+    margin-bottom: -16px;
+    background-color: #FFF;
+    font-family: "Comfortaa";
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .at-year {
+        color: #1C6899;
+        padding: 0 10px 10px 10px;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        border-bottom: 2px solid #1C6899;
+    }
+    .at-month {
+        display: block;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        font-size: 1em;
+        text-align: center;
+        color: #B6C850;
+        padding: 0.5em;
+        cursor: pointer;
+        transition: background-color 0.5s ease-in;
+        &:hover {
+            background-color: #e8ff66;
+        }
+    }
+    .at-month.at-active {
+        background-color: #B6C850;
+        color: #FFF;
+    }
+
+    .at-calendar-table {
+        color: #1C6899;
+        font-weight: bold;
+        margin-top: 1.5em;
+        width: 100%;
+        .at-calendar-weekday {
+            td {
+                padding: 10px;
+            }
+        }
+        td {
+            text-align: center;
+            cursor: default;
+            .at-calendar-day-btn {
+                cursor: pointer;
+                border: 1px solid transparent;
+                background-color: transparent;
+                margin: 5px;
+                width: 40px;
+                height: 40px;
+                transition: 0.4s ease;
+                border-radius: 4px;
+                &:hover {
+                    background-color: #B6C850;
+                    color: #FFF;
+                }
+            }
+            .at-calendar-day-btn.active {
+                background-color: #B6C850;
+                border-radius: 4px;
+            }
+        }
+    }
+
+}
