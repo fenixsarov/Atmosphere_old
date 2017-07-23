@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponseRedirect
-from .forms import RequestForm2
+from .forms import RequestForm
 
 debug_flag = True
 
@@ -44,7 +44,7 @@ def galery(request):
 def request_form(request):
     debug = debug_flag
     page = 'request_form'
-    form = RequestForm2(request.POST or None)
+    form = RequestForm(request.POST or None)
     if request.method == 'POST' and form.is_valid():
         # print(request.POST)
         # print(form.cleaned_data)

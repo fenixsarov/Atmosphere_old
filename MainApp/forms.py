@@ -3,13 +3,7 @@ from django.forms import ModelForm
 from .models import *
 
 
-class RequestForm(forms.ModelForm):
-    class Meta:
-        model = Request
-        exclude = ["id"]
-
-
-class RequestForm2(ModelForm):
+class RequestForm(ModelForm):
     name = forms.CharField(max_length=20,
                            label='Имя',
                            widget=forms.TextInput(attrs={'placeholder': 'Василий'})

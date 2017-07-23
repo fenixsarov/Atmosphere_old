@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import *
+from MainApp.models import *
+from django.apps import apps
 
 
 class ReformatAdmin(admin.ModelAdmin):
@@ -11,17 +12,14 @@ class ReformatAdmin(admin.ModelAdmin):
         model = Request
 
 
-admin.site.register(Person)
-admin.site.register(Category)
-admin.site.register(Privilege)
-admin.site.register(Avatar)
-admin.site.register(Tag)
-admin.site.register(Photo)
-admin.site.register(News)
-admin.site.register(Request, ReformatAdmin)
-admin.site.register(Location)
-admin.site.register(Order)
-admin.site.register(Portfolio)
+for model in apps.get_app_config('MainApp').models.values():
+    if model.__name__ == 'Request':
+        admin.site.register(model, ReformatAdmin)
+    else:
+        admin.site.register(model)
+
+# admin.site.register(Request, ReformatAdmin)
+
 
 
 
