@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.timezone import now
 
 
 # Very important tables
@@ -107,7 +108,8 @@ class Request(models.Model):
     name = models.CharField(verbose_name='Имя', max_length=20)
     surname = models.CharField(verbose_name='Фамилия', max_length=20)
     email = models.EmailField(verbose_name='e-mail')
-    phone = models.CharField(verbose_name='Телефон', max_length=11)
+    phone = models.CharField(verbose_name='Телефон', max_length=12)
+    date = models.DateField(verbose_name='Дата', default=now, blank=False)
 
     def __str__(self):
         return "Заказчик: {} {}".format(self.name, self.surname)

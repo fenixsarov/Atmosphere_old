@@ -18,9 +18,5 @@ for model in apps.get_app_config('MainApp').models.values():
     else:
         admin.site.register(model)
 
-# admin.site.register(Request, ReformatAdmin)
-
-
-
 
 # Register your models here.

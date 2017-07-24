@@ -10,17 +10,15 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-4">
+            <div class="col-lg-5 col-lg-offset-5">
                 <form action="" method="post">
                     {% csrf_token %}
                         <ul>
-                            {{  form.as_ul }}
-                            <li>
-                                <div>
-                                    <button type="submit" class="btn btn-primary">Отправить</button>
-                                </div>
-                            </li>
+                            {{ form.as_ul }}
                         </ul>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Отправить</button>
+                        </div>
                 </form>
             </div>
         </div>

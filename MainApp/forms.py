@@ -13,12 +13,16 @@ class RequestForm(ModelForm):
                               widget=forms.TextInput(attrs={'placeholder': 'Пупкин'})
                               )
     email = forms.EmailField(label='email',
-                             widget=forms.TextInput(attrs={'placeholder': 'pupkin@mail.ru'})
+                             widget=forms.EmailInput(attrs={'placeholder': 'pupkin@mail.ru'})
                              )
     phone = forms.CharField(max_length=12,
                             label='Телефон',
                             widget=forms.TextInput(attrs={'placeholder': '+79001234567'})
                             )
+    date = forms.DateField(label='Желаемая дата',
+                           # widget=forms.DateInput(),
+                           input_formats=['%d.%m.%Y']
+                           )
 
     class Meta:
         model = Request
