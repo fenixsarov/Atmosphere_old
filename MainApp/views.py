@@ -44,7 +44,6 @@ def galery(request):
 def request_form(request):
     debug = debug_flag
     page = 'request_form'
-    splitter_number = [ i for i in range(20) ]
     form = RequestForm(request.POST or None)
     if request.method == 'POST' and form.is_valid():
         # print(request.POST)
