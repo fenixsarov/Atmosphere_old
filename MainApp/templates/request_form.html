@@ -4,25 +4,15 @@
     Оставить заявку фотографу | {{ block.super }}
 {% endblock %}
 {% block content %}
-    <p>
-        <br><br><br><br><br><br><br><br><br><br>
-    </p>
-
     <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-lg-offset-5">
-                <form action="" method="post">
-                    {% csrf_token %}
-                        <ul>
-                            {{ form.as_ul }}
-                        </ul>
-                        <div>
-                            <button type="submit" class="btn btn-primary">Отправить</button>
-                        </div>
-                </form>
-            </div>
-        </div>
+        <div class="row"><div class="col-sm-12 splitter-block"></div></div>
     </div>
+    <div class="page-header col-sm-10 col-lg-offset-1 text-center">
+        <h1>Форма заявки</h1>
+    </div>
+
+
+    {% include 'inc-request-form.html' %}
 
 
 {% endblock %}
