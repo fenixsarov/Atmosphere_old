@@ -8,7 +8,7 @@ class RequestInOrderInline(admin.TabularInline):
     extra = 0
 
 
-for model in apps.get_app_config('Orders').models.values():
+for model in apps.get_app_config('OrdersApp').models.values():
     class ReformatAdmin(admin.ModelAdmin):
         list_display = [field.name for field in model._meta.fields]
         if model.__name__ == 'Order': inlines = [RequestInOrderInline]

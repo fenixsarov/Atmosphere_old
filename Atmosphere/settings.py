@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'MainApp',
     'AdminApp',
     'MastersApp',
-    'Orders',
+    'OrdersApp',
 
 ]
 

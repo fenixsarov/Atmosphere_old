@@ -31,7 +31,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterModelOptions(
             name='order',
-            options={'verbose_name': 'Order', 'verbose_name_plural': 'Orders'},
+            options={'verbose_name': 'Order', 'verbose_name_plural': 'OrdersApp'},
         ),
         migrations.AlterModelOptions(
             name='person',

@@ -19,14 +19,6 @@ class Status(models.Model):
 
 class Order(models.Model):
     id = models.AutoField(primary_key=True)
-    # date = models.DateTimeField(verbose_name='Дата и время')
-    # description = models.TextField(verbose_name='Описание заказа')
-    # busy = models.BooleanField(verbose_name='Занятость', default=False)
-    # # busy = models.DateTimeField(verbose_name='Занятость')
-    # price = models.DecimalField(verbose_name='Стоимость', max_digits=6, decimal_places=2, default=0.0)
-    # wish_list = models.TextField(verbose_name='Пожелания заказчика')
-    # id_user = models.ForeignKey(Person)
-    # id_request = models.ForeignKey(Request)
 
     client_name = models.CharField(verbose_name='Имя', max_length=32, blank=True, null=True, default=None)
     client_email = models.EmailField(verbose_name='email', blank=True, null=True, default=None)

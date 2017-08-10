@@ -8,7 +8,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Orders', '0003_order_price'),
+        ('OrdersApp', '0003_order_price'),
     ]
 
     operations = [

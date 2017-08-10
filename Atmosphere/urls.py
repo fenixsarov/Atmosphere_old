@@ -25,7 +25,7 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('MainApp.urls')),
-    url(r'^', include('Orders.urls')),
+    url(r'^', include('OrdersApp.urls')),
     # url(r'^admin/', include('AdminApp.urls')),
     url(r'^master_page/', include('MastersApp.urls'))
 ]
