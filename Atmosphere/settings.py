@@ -37,11 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Installed packages
     'compressor',
+
+    # Applications
     'Atmosphere',
     'MainApp',
     'AdminApp',
     'MastersApp',
+    'Orders',
 
 ]
 

@@ -133,22 +133,6 @@ class Location(models.Model):
         verbose_name_plural = 'Locations'
 
 
-class Order(models.Model):
-    id = models.AutoField(primary_key=True)
-    date = models.DateTimeField(verbose_name='Дата и время')
-    description = models.TextField(verbose_name='Описание заказа')
-    busy = models.BooleanField(verbose_name='Занятость', default=False)
-    # busy = models.DateTimeField(verbose_name='Занятость')
-    price = models.DecimalField(verbose_name='Стоимость', max_digits=6, decimal_places=2, default=0.0)
-    wish_list = models.TextField(verbose_name='Пожелания заказчика')
-    id_user = models.ForeignKey(Person)
-    id_request = models.ForeignKey(Request)
-
-    class Meta:
-        verbose_name = 'Order'
-        verbose_name_plural = 'Orders'
-
-
 class Portfolio(models.Model):
     id = models.AutoField(primary_key=True)
     description = models.TextField(verbose_name='О фотографе')
