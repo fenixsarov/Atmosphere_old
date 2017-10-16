@@ -7,6 +7,11 @@ debug_flag = True
 def main(request):
     debug = debug_flag
     page = 'index'
+    form = RequestForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        form = form.save()
+        return HttpResponseRedirect("/")
+    # return render(request, 'request_form.html', locals())
     return render(request, 'index.html', locals())
 
 

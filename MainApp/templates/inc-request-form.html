@@ -1,11 +1,13 @@
-<div class="container col-sm-6 at-contact-registration">
-    <form action="" class="col-sm-8 col-sm-offset-2" method="post">
-        <div class="row request-bar">
-            {% csrf_token %}
-            {{ form.as_p }}
-        </div>
-        <div class="row">
-            <button type="submit" class="btn btn-primary">Отправить</button>
-        </div>
-    </form>
+<div class="container col-sm-12">
+    <div class="row">
+        <form action="" class="col-sm-8 col-sm-offset-1" method="post">
+            <div class="row request-bar">
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div>
+            <div class="row">
+                <button type="submit" class="btn btn-primary request-button">Отправить</button>
+            </div>
+        </form>
+    </div>
 </div>
