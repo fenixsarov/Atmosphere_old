@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block title %}
+    Оставить заявку фотографу | {{ block.super }}
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 splitter-block"></div>
+        </div>
+    </div>
+    <div class="row page-header col-sm-12 text-center">
+        <h1>Форма заявки</h1>
+    </div>
+    {% include 'inc-request-form.html' %}
+{% endblock %}

@@ -4,6 +4,7 @@
 @import "mixin.less";
 @import "header.less";
 @import "footer.less";
+@import "request.less";
 
 @import "photograph.less";
 
@@ -140,7 +141,15 @@ div.content.portfolio-img {
         border: 1px solid gray;
         border-left: none;
         z-index: 1001;
-        
+        background-color: rgba(6, 106, 180, 0.65);
+        .row {
+            .container {
+                border: none;
+            }
+            h1 {
+                border-bottom: 1px solid gray;
+            }
+        }
     }
 }
 

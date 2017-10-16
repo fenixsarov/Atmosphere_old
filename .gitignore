@@ -1,7 +1,11 @@
 .gitignore
 mysql.cnf
+<<<<<<< HEAD
 
 db.sqlite3
 
+=======
+*.pyc
+>>>>>>> 71d98dc526ec4d2f564265872cc1106c4906edf5
 main.*.css
 runserver.sh

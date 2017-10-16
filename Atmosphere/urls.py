@@ -19,9 +19,13 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
+# Находит все файлы admin.py
+admin.autodiscover()
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('MainApp.urls')),
+    url(r'^', include('OrdersApp.urls')),
     # url(r'^admin/', include('AdminApp.urls')),
     url(r'^master_page/', include('MastersApp.urls'))
 ]
