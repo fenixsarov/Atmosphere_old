@@ -1,5 +1,7 @@
 .gitignore
 mysql.cnf
 
+db.sqlite3
+
 main.*.css
 runserver.sh
